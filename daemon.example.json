@@ -1,0 +1,14 @@
+{
+  "registry-mirrors": [],
+  "insecure-registries": [],
+  "debug": false,
+  "dns": ["8.8.8.8", "1.1.1.1"],
+  "max-concurrent-downloads": 3,
+  "proxies": {
+    "default": {
+      "httpProxy": "http://proxy.example.com:3128",
+      "httpsProxy": "http://proxy.example.com:3128",
+      "noProxy": "localhost,127.0.0.1"
+    }
+  }
+}
