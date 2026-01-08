@@ -1,6 +1,6 @@
 # Product Management — Project Report
 
-Short, well-organized project report and runbook for the Product Management multi-container application used in IT460.
+Project report and runbook for the Product Management multi-container application used in IT460.
 
 ## Table of Contents
 - Abstract
