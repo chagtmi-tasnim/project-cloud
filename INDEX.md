@@ -3,8 +3,7 @@
 ## 🟢 START HERE FIRST
 
 ### **→ START_HERE.md** ⭐ READ THIS FIRST
-Quick overview, 3-step setup, key features, and next steps.  
-**Time to read**: 5 minutes  
+Quick overview, 3-step setup, key features, and next steps.    
 **Then**: `docker-compose up -d` and visit http://localhost
 
 ---
