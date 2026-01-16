@@ -1,30 +1,24 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './ProductCard.css';
 
 function ProductCard({ product }) {
-  const handleImageLoad = (e) => {
-    // Hide the fallback icon when image loads
-    const icon = e.target.parentElement.querySelector('.product-icon');
-    if (icon) icon.style.display = 'none';
-  };
-
-  const handleImageError = (e) => {
-    // Hide the failed image and show the fallback icon
-    e.target.style.display = 'none';
-  };
+  const [imgLoaded, setImgLoaded] = useState(false);
+  const [imgError, setImgError] = useState(false);
 
   return (
     <div className="product-card">
-      <div className="product-image">
+      <div className={`product-image ${imgLoaded && !imgError ? 'has-image' : ''}`}>
         {product.image_url ? (
-          <img 
-            src={product.image_url} 
+          <img
+            src={product.image_url}
             alt={product.name}
-            onLoad={handleImageLoad}
-            onError={handleImageError}
+            onLoad={() => setImgLoaded(true)}
+            onError={() => setImgError(true)}
+            loading="lazy"
           />
         ) : null}
-        <span className="product-icon">📦</span>
+        {!imgLoaded && !imgError && <span className="product-icon">📦</span>}
+        {imgError && <span className="product-icon">📦</span>}
       </div>
       <div className="product-content">
         <h3>{product.name}</h3>

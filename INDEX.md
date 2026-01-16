@@ -124,7 +124,6 @@ project-cloud/
 ├── 📖 QUICK_START.md             ← Project summary
 ├── 📖 ARCHITECTURE.md            ← Design details
 ├── 📖 FILE_INVENTORY.md          ← File reference
-├── ☁️ OPENSHIFT_DEPLOYMENT.md    ← Cloud deployment
 ├── 🧪 TESTING.md                 ← Testing guide
 ├── ✅ VERIFICATION.md            ← Final checklist
 │
