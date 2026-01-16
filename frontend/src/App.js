@@ -1,8 +1,10 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
 import ProductList from './components/ProductList';
+import ProductDetail from './pages/ProductDetail';
 
-function App() {
+function AppContent() {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -210,7 +212,10 @@ function App() {
               </button>
               {responseTime && <span className="response-time-badge">Response: {responseTime}ms</span>}
             </div>
-            <ProductList products={products} />
+            <Routes>
+              <Route path="/" element={<ProductList products={products} />} />
+              <Route path="/product/:id" element={<ProductDetail />} />
+            </Routes>
           </>
         )}
       </main>
@@ -222,6 +227,14 @@ function App() {
         </p>
       </footer>
     </div>
+  );
+}
+
+function App() {
+  return (
+    <Router>
+      <AppContent />
+    </Router>
   );
 }
 

@@ -81,3 +81,12 @@
   font-size: 0.8rem;
   color: #999;
 }
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a .product-card {
+  cursor: pointer;
+}
